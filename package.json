@@ -22,10 +22,13 @@
     "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
     "@types/node": "^16.3.3",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
     "autoprefixer": "^10.3.1",
+    "gatsby-plugin-mdx": "^2.11.0",
     "gatsby-plugin-pnpm": "^1.2.6",
     "gatsby-plugin-postcss": "^4.8.0",
     "gatsby-plugin-purgecss": "^6.0.2",
