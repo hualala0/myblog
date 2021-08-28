@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "test": "pnpm run lint --fix"
   },
   "dependencies": {
     "gatsby": "^3.9.1",
@@ -27,13 +28,19 @@
     "@types/node": "^16.3.3",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
     "autoprefixer": "^10.3.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
     "gatsby-plugin-mdx": "^2.11.0",
     "gatsby-plugin-pnpm": "^1.2.6",
     "gatsby-plugin-postcss": "^4.8.0",
     "gatsby-plugin-purgecss": "^6.0.2",
     "gatsby-plugin-typescript": "^3.9.0",
     "gatsby-source-filesystem": "^3.12.0",
+    "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   }
 }
