@@ -19,6 +19,7 @@ specifiers:
   gatsby-plugin-purgecss: ^6.0.2
   gatsby-plugin-typescript: ^3.9.0
   gatsby-source-filesystem: ^3.12.0
+  highlight.js: ^11.2.0
   postcss: ^8.2.6
   prettier: ^2.3.2
   react: ^17.0.1
@@ -28,6 +29,7 @@ specifiers:
 
 dependencies:
   gatsby: 3.9.1_ee062b4b8a77288d928555fb0afe365f
+  highlight.js: 11.2.0
   postcss: 8.3.5
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
@@ -7740,6 +7742,11 @@ packages:
 
   /highlight.js/10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
+    dev: false
+
+  /highlight.js/11.2.0:
+    resolution: {integrity: sha512-JOySjtOEcyG8s4MLR2MNbLUyaXqUunmSnL2kdV/KuGJOmHZuAR5xC54Ko7goAXBWNhf09Vy3B+U7vR62UZ/0iw==}
+    engines: {node: '>=12.0.0'}
     dev: false
 
   /hosted-git-info/2.8.9:
