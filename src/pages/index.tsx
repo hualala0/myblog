@@ -4,12 +4,14 @@ import CodeContent from '../components/MDXFormat/Code/CodeContent/index'
 import React from 'react'
 
 const prop = {
-  language: 'html',
-  content: '<div></div>',
+  language: 'jsx',
+  content: `import React, {'\u007b'} Component {'\u007d'} from 'react';
+import hljs from 'highlight.js';
+import 'highlight.js/styles/default.css';`,
 }
 
 const index = () => {
-  return <CodeContent {...prop}></CodeContent>
+  return <CodeContent {...prop}>1213</CodeContent>
 }
 
 export default index

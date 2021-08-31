@@ -1,8 +1,8 @@
 /** @format */
 
-import React from 'react'
-import 'highlight.js'
-import 'highlight.js/styles/default.css'
+import React, { useEffect, useRef } from 'react'
+import hljs from 'highlight.js'
+import 'highlight.js/styles/dark.css'
 
 type CodeProps = {
   language: string
@@ -11,9 +11,13 @@ type CodeProps = {
 
 const CodeContent = (props: CodeProps) => {
   const { language, content } = props
+  const code = useRef<HTMLPreElement>(null)
+  useEffect(() => {
+    if (code.current) hljs.highlightBlock(code.current)
+  })
   return (
-    <pre>
-      <code className={'language-' + language}>{{ content }}</code>
+    <pre ref={code}>
+      <code className={'language-' + language}>{content}</code>
     </pre>
   )
 }
