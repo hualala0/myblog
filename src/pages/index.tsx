@@ -11,7 +11,7 @@ import 'highlight.js/styles/default.css';`,
 }
 
 const index = () => {
-  return <CodeContent {...prop}>1213</CodeContent>
+  return <CodeContent {...prop}></CodeContent>
 }
 
 export default index
