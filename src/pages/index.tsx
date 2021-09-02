@@ -1,17 +1,14 @@
 /** @format */
 
-import CodeContent from '../components/MDXFormat/Code/CodeContent/index'
+import MyCode from '../components/MDXFormat/Code'
 import React from 'react'
 
-const prop = {
-  language: 'jsx',
-  content: `import React, {'\u007b'} Component {'\u007d'} from 'react';
-import hljs from 'highlight.js';
-import 'highlight.js/styles/default.css';`,
-}
+const prop = new Map()
+prop.set('javascript', 'const a = 1')
+prop.set('java', 'int a = 1')
 
 const index = () => {
-  return <CodeContent {...prop}></CodeContent>
+  return <MyCode copyMap={prop}></MyCode>
 }
 
 export default index

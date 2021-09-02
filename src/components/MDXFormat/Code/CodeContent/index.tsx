@@ -16,7 +16,7 @@ const CodeContent = (props: CodeProps) => {
     if (code.current) hljs.highlightBlock(code.current)
   })
   return (
-    <pre ref={code}>
+    <pre ref={code} className='font-sans'>
       <code className={'language-' + language}>{content}</code>
     </pre>
   )
