@@ -7,7 +7,7 @@ import myh1 from './myh1'
 import { graphql } from 'gatsby'
 
 // const MyH1 = (props: any) => <h1 style={{color: 'tomato'}} {...props} />
-export const format = ({ children, props }: { children: any; props: any }) => {
+const format = ({ children, props }: { children: any; props: any }) => {
   return (
     <div>
       <MDXProvider
@@ -17,16 +17,18 @@ export const format = ({ children, props }: { children: any; props: any }) => {
           // Or define component inline
         }}
       >
-        <MDXRenderer>{props.data.mdx.body}</MDXRenderer>
+        <MDXRenderer>{props.mdx.body}</MDXRenderer>
         {children}
       </MDXProvider>
     </div>
   )
 }
 
+export default format
+
 export const pageQuery = graphql`
-  query MDXQuery($id: String!) {
-    mdx(id: { eq: $id }) {
+  query MDXQuery {
+    mdx {
       id
       body
     }

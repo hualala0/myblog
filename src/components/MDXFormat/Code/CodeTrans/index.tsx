@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 
 type transProps = {
   language: string
@@ -10,12 +10,13 @@ type transProps = {
 const CodeTrans = (props: transProps) => {
   const { language, setLanguage } = props
   const trans = () => {
-    return (e: Event) => {
-      const target = e.target as HTMLDivElement
-      if (target.nodeValue) setLanguage(target.nodeValue)
-    }
+    if (language) setLanguage(language)
   }
-  return <div onClick={trans}>{language}</div>
+  return (
+    <div className='inset-y-1 inset-x-2' onClick={trans}>
+      {language}
+    </div>
+  )
 }
 
 export default CodeTrans

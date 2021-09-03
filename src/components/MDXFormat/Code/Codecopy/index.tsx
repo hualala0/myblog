@@ -19,7 +19,7 @@ const CodeCopy = (props: copyProps) => {
   }
   return (
     <button
-      className='bg-yellow-200 bg-opacity-0 hover:bg-opacity-100 disabled:bg-opacity-0 disabled:cursor-not-allowed'
+      className='absolute -top-0 -right-0 bg-yellow-200 bg-opacity-0 hover:text-white hover:bg-opacity-100 disabled:bg-opacity-0 disabled:cursor-not-allowed'
       disabled={isCopy}
       onClick={copy}
     >

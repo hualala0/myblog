@@ -24,9 +24,9 @@ const MyCode = (props: copyProps) => {
   }, [language])
   return (
     <div>
-      <div>{languageItems}</div>
-      <div>
-        <CodeContent language={language} content={content}></CodeContent> 
+      <div className='flex'>{languageItems}</div>
+      <div className='relative'>
+        <CodeContent language={language} content={content}></CodeContent>
         <CodeCopy isCopy={isCopy} setIsCopy={setIsCopy} content={content}></CodeCopy>
       </div>
     </div>

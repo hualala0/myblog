@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/dark.css'
+import 'highlight.js/styles/github.css'
 
 type CodeProps = {
   language: string
@@ -13,11 +13,14 @@ const CodeContent = (props: CodeProps) => {
   const { language, content } = props
   const code = useRef<HTMLPreElement>(null)
   useEffect(() => {
-    if (code.current) hljs.highlightBlock(code.current)
-  })
+    hljs.configure({ ignoreUnescapedHTML: true })
+    if (code.current) hljs.highlightElement(code.current)
+  }, [content])
   return (
-    <pre ref={code} className='font-sans'>
-      <code className={'language-' + language}>{content}</code>
+    <pre className={`language-${language} font-sans`}>
+      <code ref={code} className={`language-${language}`}>
+        {content}
+      </code>
     </pre>
   )
 }
