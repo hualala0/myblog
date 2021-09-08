@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useRef } from 'react'
-import { sleep } from '../../../../utils'
+import { sleep } from '../../../utils'
 
 type copyProps = {
   isCopy: boolean

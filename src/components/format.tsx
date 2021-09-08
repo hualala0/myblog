@@ -5,7 +5,7 @@ import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import myh1 from './myh1'
 import { graphql } from 'gatsby'
-import CodeContent from './MDXFormat/Code/CodeContent'
+import PreFormat from './MDXFormat/PreFormat'
 
 // const MyH1 = (props: any) => <h1 style={{color: 'tomato'}} {...props} />
 const format = ({ data }: { data: any }) => {
@@ -14,7 +14,7 @@ const format = ({ data }: { data: any }) => {
       <MDXProvider
         components={{
           // Map HTML element tag to React component
-          pre: CodeContent,
+          pre: PreFormat,
           // Or define component inline
         }}
       >

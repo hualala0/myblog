@@ -1,6 +1,6 @@
 /** @format */
 
-import MyCode from '../components/MDXFormat/Code'
+import MyCode from '../components/MyCode'
 import React from 'react'
 
 const prop = new Map()
