@@ -12,21 +12,23 @@ type copyProps = {
 const MyCode = (props: copyProps) => {
   const { copyMap } = props
   const [isCopy, setIsCopy] = useState<boolean>(false)
-  const [language, setLanguage] = useState<string>(copyMap.keys().next().value)
+  const [curLanguage, setLanguage] = useState<string>(copyMap.keys().next().value)
   const [content, setContent] = useState<string>(copyMap.values().next().value)
   const languageItems = [...copyMap.keys()].map(language => {
-    return <CodeTrans key={language} language={language} setLanguage={setLanguage}></CodeTrans>
+    return (
+      <CodeTrans curLanguage={curLanguage} key={language} language={language} setLanguage={setLanguage}></CodeTrans>
+    )
   })
   useEffect(() => {
-    const mapContent = copyMap.get(language)
+    const mapContent = copyMap.get(curLanguage)
     setIsCopy(false)
     if (mapContent) setContent(mapContent)
-  }, [language])
+  }, [curLanguage])
   return (
     <div>
       <div className='flex'>{languageItems}</div>
       <div className='relative'>
-        <CodeContent language={language} content={content}></CodeContent>
+        <CodeContent language={curLanguage} content={content}></CodeContent>
         <CodeCopy isCopy={isCopy} setIsCopy={setIsCopy} content={content}></CodeCopy>
       </div>
     </div>
