@@ -12,6 +12,7 @@ exports.createPages = ({ graphql, actions }) => {
             node {
               frontmatter {
                 title
+                route
               }
               body
             }
@@ -29,7 +30,7 @@ exports.createPages = ({ graphql, actions }) => {
     result.data.allMdx.edges.forEach(edge => {
       createPage({
         // Path for this page — required
-        path: `${edge.node.frontmatter.title}`,
+        path: `${edge.node.frontmatter.route}`,
         component: format,
         context: {},
       })
