@@ -32,7 +32,7 @@ exports.createPages = ({ graphql, actions }) => {
         // Path for this page — required
         path: `${edge.node.frontmatter.route}`,
         component: format,
-        context: {},
+        context: { edge },
       })
     })
   })

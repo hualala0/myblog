@@ -1,3 +1,5 @@
 /** @format */
 
-import PreFormat from './PreFormat'
+import { PreFormat } from './PreFormat'
+
+export { PreFormat }

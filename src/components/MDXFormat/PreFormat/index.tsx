@@ -18,4 +18,4 @@ const PreFormat = (props: any) => {
   )
 }
 
-export default PreFormat
+export { PreFormat }
