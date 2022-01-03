@@ -29,7 +29,7 @@ declare module '@mdx-js/react' {
     | 'tr'
     | 'ul'
   export type Components = {
-    [key in ComponentType]?: React.ComponentType<{ props: any }>
+    [key in ComponentType]?: React.ComponentType<{ children: React.ReactNode }>
   }
   export interface MDXProviderProps {
     children: React.ReactNode
@@ -37,11 +37,3 @@ declare module '@mdx-js/react' {
   }
   export class MDXProvider extends React.Component<MDXProviderProps> {}
 }
-
-declare module '*.svg'
-declare module '*.png'
-declare module '*.jpg'
-declare module '*.jpeg'
-declare module '*.gif'
-declare module '*.bmp'
-declare module '*.tiff'

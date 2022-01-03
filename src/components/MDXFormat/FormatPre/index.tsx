@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import CodeCopy from '../../MyCode/CodeCopy'
 import CodeContent from '../../MyCode/CodeContent'
 
-const PreFormat = (props: any) => {
+const FormatPre = (props: any) => {
   const { className: language, children: content } = props.children.props
   const [isCopy, setIsCopy] = useState<boolean>(false)
   useEffect(() => {
@@ -18,4 +18,4 @@ const PreFormat = (props: any) => {
   )
 }
 
-export { PreFormat }
+export { FormatPre }
