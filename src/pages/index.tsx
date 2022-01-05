@@ -2,39 +2,34 @@
 
 import MyCode from '../components/MyCode'
 import React from 'react'
+import { graphql } from 'gatsby'
 
-const prop = new Map()
-prop.set(
-  'javascript',
-  `
-  const a = 1
-  let b=0
-  `,
-)
-prop.set(
-  'css',
-  `
-@font-face {
-  font-family: Chunkfive; src: url('Chunkfive.otf');
-}
-
-body, .usertext {
-  color: #F0F0F0; background: #600;
-  font-family: Chunkfive, sans;
-  --heading-1: 30px/32px Helvetica, sans-serif;
-}
-
-@import url(print.css);
-@media print {
-  a[href^=http]::after {
-    content: attr(href)
-  }
-}
-`,
-)
-
-const index = () => {
-  return <MyCode copyMap={prop}></MyCode>
+const index = ({ data }: { data: any }) => {
+  const posts = data.allMdx.edges
+  return (
+    <div>
+      {posts.map((post: any) => {
+        return <div>{post.node.frontmatter.description}</div>
+      })}
+    </div>
+  )
 }
 
 export default index
+
+export const pageQuery = graphql`
+  query {
+    allMdx {
+      edges {
+        node {
+          frontmatter {
+            date
+            description
+            route
+            title
+          }
+        }
+      }
+    }
+  }
+`
