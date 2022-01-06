@@ -1,29 +1,20 @@
 /** @format */
+import React from 'react'
+import { Article } from '../Article'
 
-import { graphql } from 'gatsby'
-import React, { useEffect, useState } from 'react'
-
-const Card = ({ data }: { data: any }) => {
+export const Card = ({ data }: { data: any }) => {
   return (
     <div>
-      <MDXProvider
-        components={{
-          // Map HTML element tag to React component
-          pre: PreFormat,
-          // Or define component inline
-        }}
-      >
-        <MDXRenderer>{data.mdx.body}</MDXRenderer>
-      </MDXProvider>
+      {data.map(({ node }: any) => {
+        return (
+          <Article
+            date={node.frontmatter.date}
+            author={node.frontmatter.route}
+            title={node.frontmatter.title}
+            content={node.excerpt}
+          ></Article>
+        )
+      })}
     </div>
   )
 }
-
-export const pageQuery = graphql`
-  query MDXQuery {
-    mdx {
-      id
-      body
-    }
-  }
-`

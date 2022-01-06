@@ -1,16 +1,16 @@
 /** @format */
 
 import MyCode from '../components/MyCode'
-import React from 'react'
+import React, { useState } from 'react'
 import { graphql } from 'gatsby'
+import { Card } from '../components/Card'
 
 const index = ({ data }: { data: any }) => {
   const posts = data.allMdx.edges
+  const { start, setStart } = useState(0)
   return (
     <div>
-      {posts.map((post: any) => {
-        return <div>{post.node.frontmatter.description}</div>
-      })}
+      <Card data={posts}></Card>
     </div>
   )
 }
@@ -22,6 +22,7 @@ export const pageQuery = graphql`
     allMdx {
       edges {
         node {
+          excerpt
           frontmatter {
             date
             description
