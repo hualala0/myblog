@@ -4,7 +4,14 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      grayscale: {
+        50: '50%',
+      },
+      width: {
+        90: '22rem',
+      },
+    },
   },
   variants: {
     extend: {

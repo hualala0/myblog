@@ -2,7 +2,7 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import loading from './images/loading.png'
+import loading from './static/images/loading.png'
 
 export default function HTML(props) {
   return (
@@ -29,7 +29,7 @@ export default function HTML(props) {
             top: 0,
             right: 0,
             bottom: 0,
-            zIndex: 100,
+            zIndex: 200,
           }}
         >
           <img className='head' src={loading} alt='loading spinner' width='150' height='150' />
