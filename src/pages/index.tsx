@@ -5,12 +5,14 @@ import React, { useState } from 'react'
 import { graphql } from 'gatsby'
 import { Card } from '../components/Card'
 import { PicCard } from '../components/PicCard'
+import { useLoading } from '../hooks'
 
 const index = ({ data }: { data: any }) => {
   const posts = data.allMdx.edges
   let count = 0
+  useLoading()
   return (
-    <div className='w-screen h-screen relative overflow-hidden'>
+    <div className='w-full h-full relative overflow-hidden'>
       <div className='grid w-max bg-gray-100 grid-flow-col-dense grid-rows-3 gap-3 content-end'>
         {posts.map((post: any) => {
           const content = post.node.excerpt

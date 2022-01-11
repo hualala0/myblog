@@ -1,8 +1,11 @@
 /** @format */
 
-import React from 'react'
+import { Link } from 'gatsby'
+import React, { useEffect } from 'react'
+import { useLoading } from '../../hooks'
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
+  useLoading()
   return (
     <div className='grid grid-cols-4'>
       <div className=''></div>
