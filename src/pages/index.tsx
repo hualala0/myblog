@@ -1,11 +1,12 @@
 /** @format */
 
 import MyCode from '../components/MyCode'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { graphql } from 'gatsby'
 import { Card } from '../components/Card'
 import { PicCard } from '../components/PicCard'
 import { useLoading } from '../hooks'
+import { PageTurn } from '../components/PageTurn'
 
 const index = ({ data }: { data: any }) => {
   const posts = data.allMdx.edges
@@ -17,14 +18,17 @@ const index = ({ data }: { data: any }) => {
         {posts.map((post: any) => {
           const content = post.node.excerpt
           if (post.node.frontmatter.picture) {
+            count += 3
             return (
               <PicCard data={{ ...post.node.frontmatter, content, alt: 'img', isFull: count++ % 2 == 0 }}></PicCard>
             )
           } else {
+            count++
             return <Card data={{ ...post.node.frontmatter, content }}></Card>
           }
         })}
       </div>
+      <PageTurn direction={0} pageCount={count / 3}></PageTurn>
     </div>
   )
 }
