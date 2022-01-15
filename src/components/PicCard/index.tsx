@@ -9,8 +9,8 @@ export const PicCard = ({ data }: { data: any }) => {
       <img
         className={
           data.isFull
-            ? 'absolute object-cover h-full w-full filter grayscale-50'
-            : 'absolute object-cover h-3/5 w-90 m-4 filter grayscale-50 rounded-3xl'
+            ? 'absolute object-cover h-full w-full filter grayscale-60'
+            : 'absolute object-cover h-3/5 w-90 m-4 filter rounded-3xl'
         }
         src={data.picture}
         alt={data.alt}

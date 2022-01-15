@@ -1,20 +1,38 @@
 /** @format */
 
 import React, { useState } from 'react'
+import { TurnRight } from '../TurnRight'
+import { TurnLeft } from '../TurnLeft'
 
 export const PageTurn = ({
-  direction,
-  perWidth,
-  pageCount,
+  isStart,
+  isEnd,
+  curCount,
+  setCurCount,
 }: {
-  direction: number
-  perWidth: number
-  pageCount: number
+  isStart: boolean
+  isEnd: boolean
+  curCount: number
+  setCurCount: any
 }) => {
-  const [curWidth, setCurWidth] = useState(0)
+  const playNext = () => {
+    if (!isEnd) {
+      setCurCount(curCount + 1)
+    }
+  }
+  const playLast = () => {
+    if (!isStart) {
+      setCurCount(curCount - 1)
+    }
+  }
   return (
     <div>
-      <div className={direction ? 'fixed left-0 top-1/2' : 'fixed right-0 top-1/2'}>{pageCount}</div>
+      <div className='fixed top-0 left-0 h-full bg-gray-200 opacity-60 hover:' onClick={playLast}>
+        <TurnLeft></TurnLeft>
+      </div>
+      <div className='fixed top-0 right-0 h-full bg-gray-200 opacity-60' onClick={playNext}>
+        <TurnRight></TurnRight>
+      </div>
     </div>
   )
 }

@@ -1,7 +1,6 @@
 /** @format */
 
-import MyCode from '../components/MyCode'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { graphql } from 'gatsby'
 import { Card } from '../components/Card'
 import { PicCard } from '../components/PicCard'
@@ -10,25 +9,38 @@ import { PageTurn } from '../components/PageTurn'
 
 const index = ({ data }: { data: any }) => {
   const posts = data.allMdx.edges
+  const [curCount, setCurCount] = useState(0)
+  const container = useRef<HTMLDivElement>(null)
   let count = 0
+  let pageCount = 0
   useLoading()
+  useEffect(() => {
+    if (container.current && pageCount != 0) {
+      container.current.style.transform = `translate3d(${-(curCount / (pageCount / 3)) * 100}%,0,0)`
+    }
+  }, [curCount])
   return (
-    <div className='w-full h-full relative overflow-hidden'>
-      <div className='grid w-max bg-gray-100 grid-flow-col-dense grid-rows-3 gap-3 content-end'>
+    <div className='w-screen h-screen relative overflow-hidden'>
+      <div ref={container} className='grid w-max bg-gray-100 grid-flow-col-dense grid-rows-3 gap-3 content-end'>
         {posts.map((post: any) => {
           const content = post.node.excerpt
           if (post.node.frontmatter.picture) {
-            count += 3
+            pageCount += 3
             return (
               <PicCard data={{ ...post.node.frontmatter, content, alt: 'img', isFull: count++ % 2 == 0 }}></PicCard>
             )
           } else {
-            count++
+            pageCount++
             return <Card data={{ ...post.node.frontmatter, content }}></Card>
           }
         })}
       </div>
-      <PageTurn direction={0} pageCount={count / 3}></PageTurn>
+      <PageTurn
+        isStart={curCount == 0}
+        isEnd={curCount == pageCount / 3 - 1}
+        curCount={curCount}
+        setCurCount={setCurCount}
+      ></PageTurn>
     </div>
   )
 }

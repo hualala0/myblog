@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       grayscale: {
-        50: '50%',
+        60: '60%',
       },
       width: {
         90: '22rem',
