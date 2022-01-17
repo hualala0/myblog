@@ -13,11 +13,21 @@ const index = ({ data }: { data: any }) => {
   const container = useRef<HTMLDivElement>(null)
   let count = 0
   let pageCount = 0
+  let player: Animation
   useLoading()
   useEffect(() => {
-    if (container.current && pageCount != 0) {
-      container.current.style.transform = `translate3d(${-(curCount / (pageCount / 3)) * 100}%,0,0)`
+    if (container.current) {
+      const kyEffect = new KeyframeEffect(
+        null,
+        {
+          transform: [`translate3d(${-(curCount / (pageCount / 3)) * 100}%,0,0)`],
+        },
+        { duration: 2000, fill: 'both', easing: 'linear' },
+      )
+      kyEffect.target = container.current
+      player = new Animation(kyEffect)
     }
+    player?.play()
   }, [curCount])
   return (
     <div className='w-screen h-screen relative overflow-hidden'>

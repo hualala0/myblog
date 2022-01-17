@@ -17,17 +17,19 @@ export const PageTurn = ({
 }) => {
   const playNext = () => {
     if (!isEnd) {
+      // nextPlayer.play()
       setCurCount(curCount + 1)
     }
   }
   const playLast = () => {
     if (!isStart) {
+      // lastPlayer.play()
       setCurCount(curCount - 1)
     }
   }
   return (
     <div>
-      <div className='fixed top-0 left-0 h-full bg-gray-200 opacity-60 hover:' onClick={playLast}>
+      <div className='fixed top-0 left-0 h-full bg-gray-200 opacity-60' onClick={playLast}>
         <TurnLeft></TurnLeft>
       </div>
       <div className='fixed top-0 right-0 h-full bg-gray-200 opacity-60' onClick={playNext}>
