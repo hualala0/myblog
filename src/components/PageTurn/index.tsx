@@ -29,10 +29,10 @@ export const PageTurn = ({
   }
   return (
     <div>
-      <div className='fixed top-0 left-0 h-full bg-gray-200 opacity-60' onClick={playLast}>
+      <div className='fixed top-0 left-0 h-full bg-transparent hover:bg-gray-200 opacity-60' onClick={playLast}>
         <TurnLeft></TurnLeft>
       </div>
-      <div className='fixed top-0 right-0 h-full bg-gray-200 opacity-60' onClick={playNext}>
+      <div className='fixed top-0 right-0 h-full bg-transparent hover:bg-gray-200 opacity-60' onClick={playNext}>
         <TurnRight></TurnRight>
       </div>
     </div>
