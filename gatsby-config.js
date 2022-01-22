@@ -33,5 +33,13 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
       },
     },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/src/static/images/`,
+        },
+      },
+    },
   ],
 }
