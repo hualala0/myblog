@@ -11,7 +11,7 @@ picture: "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fdingyue.ws.126.n
 ## 利用ESLint和Prettier进行项目规范
 ### ESLint
 ### Prettier
-Prettier 是一个流行的代码格式化工具。正如官网对 Prettier 的介绍，其优点是：支持多语言、与大多数编辑器继承和配置项较少。与 ESLint 相比，Prettier 偏向于把控项目的代码质量，在代码风格的检测上也更加全面。所以将 Prettier 和 ESLint 配合使用。
+Prettier 是一个流行的代码格式化工具。正如官网对 Prettier 的介绍，其优点是：支持多语言、与大多数编辑器继承和配置项较少。与 ESLint 相比，Prettier 偏向于把控项目的代码质量，在代码风格的检测上也更加全面。所以将 Prettier 和 ESLint 配合使用。1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111
 
 安装
 ``` javascript
