@@ -1,7 +1,7 @@
 ---
 title: '并查集详解'
 date: '2021-01-23'
-route: 'union_find'
+route: 'union-find'
 author: 'hulalala'
 ---
 

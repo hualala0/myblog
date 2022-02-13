@@ -1,7 +1,7 @@
 ---
 title: 'WAAPI 笔记'
 date: '2021-01-30'
-route: 'union_find'
+route: 'waapi'
 author: 'hulalala'
 ---
 
