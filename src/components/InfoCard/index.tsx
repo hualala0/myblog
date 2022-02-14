@@ -5,7 +5,7 @@ import head from '../../static/images/head.jpg'
 
 export const InfoCard = () => {
   return (
-    <div className='flex flex-row w-auto h-40 bg-white m-2 rounded-3xl'>
+    <div className='flex flex-row h-40 bg-white rounded-3xl'>
       <div className='flex-initial'>
         <img className='m-5 w-32 h-32 rounded-full' src={head}></img>
       </div>
