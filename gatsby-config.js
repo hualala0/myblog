@@ -1,10 +1,6 @@
 /** @format */
 
 module.exports = {
-  siteMetadata: {
-    siteUrl: 'https://www.yourdomain.tld',
-    title: 'myblog',
-  },
   plugins: [
     `gatsby-plugin-postcss`,
     `gatsby-plugin-pnpm`,
