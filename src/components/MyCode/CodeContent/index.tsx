@@ -2,7 +2,6 @@
 
 import React, { Children, useEffect, useRef } from 'react'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/mono-blue.css'
 
 const CodeContent = (props: any) => {
   const { language, content } = props

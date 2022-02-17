@@ -7,6 +7,7 @@ import { PicCard } from '../components/PicCard'
 import { useLoading } from '../hooks'
 import { PageTurn } from '../components/PageTurn'
 import { InfoCard } from '../components/InfoCard'
+import { BgImage } from '../components/BgImage'
 
 const index = ({ data }: { data: any }) => {
   const posts = data.allMdx.edges
@@ -32,7 +33,8 @@ const index = ({ data }: { data: any }) => {
     player?.play()
   }, [curCount])
   return (
-    <div className='bg-myblue bg-food'>
+    <div className='bg-transparent'>
+      <BgImage></BgImage>
       <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
         <InfoCard></InfoCard>
       </div>
