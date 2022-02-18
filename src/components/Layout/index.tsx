@@ -1,5 +1,3 @@
-/** @format */
-
 import { Link } from 'gatsby'
 import React, { useEffect } from 'react'
 import { useLoading } from '../../hooks'

@@ -1,5 +1,3 @@
-/** @format */
-
 import { FormatPre } from './FormatPre'
 import { FormatH1 } from './FormatH1'
 import { FormatH2 } from './FormatH2'

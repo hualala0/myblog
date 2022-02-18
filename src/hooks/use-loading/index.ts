@@ -1,5 +1,3 @@
-/** @format */
-
 import { useEffect } from 'react'
 
 export const useLoading = () => {

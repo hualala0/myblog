@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react'
 
 const FormatEm = ({ children }: { children: React.ReactNode }) => {

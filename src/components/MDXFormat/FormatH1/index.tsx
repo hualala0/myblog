@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react'
 
 const FormatH1 = ({ children }: { children: React.ReactNode }) => {

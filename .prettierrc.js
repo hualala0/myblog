@@ -7,7 +7,7 @@ module.exports = {
   'bracketSpacing': true, // 对象左右两侧需要空格
   'jsxSingleQuote': true, //  在 JSX 中使用单引号代替双引号
   'trailingComma': 'all', //  尽可能尾随逗号
-  'insertPragma': true,
+  // 'insertPragma': true,
   'jsxBracketSameLine': false, // html 关闭标签换行
   'arrowParens': 'avoid', // 单参数的箭头函数参数不需要括号
   'proseWrap': 'never', // 参考 https://prettier.io/docs/en/options.html#prose-wrap

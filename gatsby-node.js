@@ -1,4 +1,3 @@
-/** @format */
 const path = require('path')
 const format = require.resolve('./src/components/format.tsx')
 

@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useEffect, useState } from 'react'
 import CodeCopy from '../../MyCode/CodeCopy'
 import CodeContent from '../../MyCode/CodeContent'

@@ -1,5 +1,3 @@
-/** @format */
-
 import React from 'react'
 
 const FormatStrong = ({ children }: { children: React.ReactNode }) => {

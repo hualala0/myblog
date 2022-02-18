@@ -1,4 +1,4 @@
-/** @format */
+
 import { navigate } from 'gatsby'
 import React from 'react'
 import { Article } from '../Article'

@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useEffect, useRef, useState } from 'react'
 import { graphql } from 'gatsby'
 import { Card } from '../components/Card'

@@ -1,5 +1,3 @@
-/** @format */
-
 declare module '@mdx-js/react' {
   import * as React from 'react'
   type ComponentType =

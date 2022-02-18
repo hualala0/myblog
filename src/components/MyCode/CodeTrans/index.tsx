@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useRef } from 'react'
 
 type transProps = {
