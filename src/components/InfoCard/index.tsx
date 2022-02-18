@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import head from '../../static/images/head.jpg'
 
