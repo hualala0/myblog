@@ -51,13 +51,13 @@ const index = ({ data }: { data: any }) => {
             }
           })}
         </div>
-      </div>
+      </div> */}
       <PageTurn
         isStart={curCount == 0}
         isEnd={curCount >= pageCount / 3 - 1}
         curCount={curCount}
         setCurCount={setCurCount}
-      ></PageTurn> */}
+      ></PageTurn>
     </div>
   )
 }
