@@ -32,7 +32,7 @@ const index = ({ data }: { data: any }) => {
   }, [curCount])
   return (
     <div className='bg-transparent'>
-      <BgImage></BgImage>
+      {/* <BgImage></BgImage>
       <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
         <InfoCard></InfoCard>
       </div>
@@ -57,7 +57,7 @@ const index = ({ data }: { data: any }) => {
         isEnd={curCount >= pageCount / 3 - 1}
         curCount={curCount}
         setCurCount={setCurCount}
-      ></PageTurn>
+      ></PageTurn> */}
     </div>
   )
 }
