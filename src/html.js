@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import loading from './static/images/loading.png'
 
 export default function HTML(props) {
   return (
@@ -30,10 +29,10 @@ export default function HTML(props) {
             zIndex: 200,
           }}
         >
-          <img className='head' src={loading} alt='loading spinner' width='150' height='150' />
-          <img className='body1' src={loading} alt='loading spinner' width='150' height='150' />
-          <img className='body2' src={loading} alt='loading spinner' width='150' height='150' />
-          <img className='foot' src={loading} alt='loading spinner' width='150' height='150' />
+          <img className='head' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
+          <img className='body1' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
+          <img className='body2' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
+          <img className='foot' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
         </div>
         <div key={`body`} id='___gatsby' dangerouslySetInnerHTML={{ __html: props.body }} />
         {props.postBodyComponents}
