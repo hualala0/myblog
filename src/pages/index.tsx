@@ -43,11 +43,14 @@ const index = ({ data }: { data: any }) => {
             if (post.node.frontmatter.picture) {
               pageCount += 3
               return (
-                <PicCard data={{ ...post.node.frontmatter, content, alt: 'img', isFull: count++ % 2 == 0 }}></PicCard>
+                <PicCard
+                  key={post.node.frontmatter.route}
+                  data={{ ...post.node.frontmatter, content, alt: 'img', isFull: count++ % 2 == 0 }}
+                ></PicCard>
               )
             } else {
               pageCount++
-              return <Card data={{ ...post.node.frontmatter, content }}></Card>
+              return <Card key={post.node.frontmatter.route} data={{ ...post.node.frontmatter, content }}></Card>
             }
           })}
         </div>

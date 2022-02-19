@@ -3,6 +3,9 @@ module.exports = {
     `gatsby-plugin-postcss`,
     `gatsby-plugin-pnpm`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
@@ -22,9 +25,31 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/static/images/`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.mdx`, `.md`],
+        extensions: ['.md', '.mdx'],
+        plugins: ['gatsby-remark-gifs'],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: ['.md', '.mdx'],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
       },
     },
     {

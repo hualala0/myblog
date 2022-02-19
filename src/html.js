@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { StaticImage } from 'gatsby-plugin-image'
 
 export default function HTML(props) {
   return (
@@ -29,10 +30,42 @@ export default function HTML(props) {
             zIndex: 200,
           }}
         >
-          <img className='head' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
-          <img className='body1' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
-          <img className='body2' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
-          <img className='foot' src='./static/images/loading.png' alt='loading spinner' width='150' height='150' />
+          <StaticImage
+            className='head'
+            src='./static/images/loading.png'
+            loading='eager'
+            style={{ position: 'absolute' }}
+            alt='loading spinner'
+            width={150}
+            height={150}
+          ></StaticImage>
+          <StaticImage
+            className='body1'
+            src='./static/images/loading.png'
+            loading='eager'
+            style={{ position: 'absolute' }}
+            alt='loading spinner'
+            width={150}
+            height={150}
+          ></StaticImage>
+          <StaticImage
+            className='body2'
+            src='./static/images/loading.png'
+            loading='eager'
+            style={{ position: 'absolute' }}
+            alt='loading spinner'
+            width={150}
+            height={150}
+          ></StaticImage>
+          <StaticImage
+            className='foot'
+            src='./static/images/loading.png'
+            loading='eager'
+            style={{ position: 'absolute' }}
+            alt='loading spinner'
+            width={150}
+            height={150}
+          ></StaticImage>
         </div>
         <div key={`body`} id='___gatsby' dangerouslySetInnerHTML={{ __html: props.body }} />
         {props.postBodyComponents}
