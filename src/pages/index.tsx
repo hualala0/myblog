@@ -33,9 +33,9 @@ const index = ({ data }: { data: any }) => {
   return (
     <div className='bg-transparent'>
       <BgImage></BgImage>
-      {/* <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
+      <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
         <InfoCard></InfoCard>
-      </div> */}
+      </div>
       <div className='h-auto w-epc overflow-hidden px-2 relative left-1/2 transform-gpu -translate-x-1/2'>
         <div ref={container} className='grid w-max h-auto grid-flow-col-dense grid-rows-3 gap-1 content-end'>
           {posts.map((post: any) => {
