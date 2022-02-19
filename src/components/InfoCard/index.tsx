@@ -1,10 +1,11 @@
 import React from 'react'
+import head from '../../static/images/head.jpg'
 
 export const InfoCard = () => {
   return (
     <div className='flex flex-row h-40 bg-white rounded-3xl'>
       <div className='flex-initial'>
-        <img className='m-5 w-32 h-32 rounded-full' src='../../static/images/head.jpg'></img>
+        <img className='m-5 w-32 h-32 rounded-full' src={head}></img>
       </div>
       <div className='flex-auto ml-5'>
         <div className='mt-5 text-2xl '>hulalala</div>
