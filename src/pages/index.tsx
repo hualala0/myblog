@@ -32,8 +32,8 @@ const index = ({ data }: { data: any }) => {
   }, [curCount])
   return (
     <div className='bg-transparent'>
-      {/* <BgImage></BgImage>
-      <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
+      <BgImage></BgImage>
+      {/* <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
         <InfoCard></InfoCard>
       </div>
       <div className='h-auto w-epc overflow-hidden px-2 relative left-1/2 transform-gpu -translate-x-1/2'>
