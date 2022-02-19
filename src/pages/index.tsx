@@ -14,7 +14,7 @@ const index = ({ data }: { data: any }) => {
   let count = 0
   let pageCount = 0
   let player: Animation
-  // useLoading()
+  useLoading()
   useEffect(() => {
     if (container.current) {
       const options: options = { duration: 2000, fill: 'both', easing: 'linear' }

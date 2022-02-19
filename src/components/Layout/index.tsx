@@ -4,7 +4,7 @@ import { useLoading } from '../../hooks'
 import { BgImage } from '../BgImage'
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
-  // useLoading()
+  useLoading()
   return (
     <div className='grid grid-cols-4 bg-transparent'>
       <BgImage></BgImage>
