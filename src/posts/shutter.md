@@ -1,8 +1,9 @@
 ---
 title: '利用WAAPI实现百叶窗切页效果'
-date: '2021-02-09'
+date: '2022-02-09'
 route: 'shutter'
 author: 'hulalala'
+picture: 'https://picsum.photos/seed/window/200/300'
 ---
 
 # 利用 WAAPI 实现百叶窗切页效果
@@ -13,7 +14,7 @@ author: 'hulalala'
 
 [在 Github 上查看](https://github.com/hulala1a/shutter_example)
 
-![百叶窗](shutter.gif)
+![百叶窗](../static/images/shutter.gif)
 
 ## 简单思路
 

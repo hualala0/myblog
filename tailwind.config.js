@@ -3,6 +3,21 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        lu: [
+          'Lucida Grande',
+          'Helvetica Neue',
+          'PingFang SC',
+          'Hiragino Sans GB',
+          'Hiragino Sans GB W3',
+          'Microsoft YaHei',
+          'WenQuanYi Microhei',
+          'Heiti SC',
+          'STHeiti',
+          'Noto Sans CJK SC',
+          'Source Han Sans CN',
+        ],
+      },
       grayscale: {
         60: '60%',
       },

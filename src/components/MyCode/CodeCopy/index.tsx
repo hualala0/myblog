@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef } from 'react'
 import { sleep } from '../../../utils'
 
@@ -19,7 +17,7 @@ const CodeCopy = (props: copyProps) => {
   }
   return (
     <button
-      className='absolute text-lg rounded-xl py-1 px-2 -top-0 -right-0 bg-blue-400 bg-opacity-0 hover:text-white hover:bg-opacity-100 disabled:bg-opacity-0 disabled:text-black disabled:cursor-not-allowed'
+      className='absolute cursor-pointer text-lg rounded-xl py-1 px-2 -top-0 -right-0 bg-blue-400 bg-opacity-0 hover:text-white hover:bg-opacity-100 disabled:bg-opacity-0 disabled:text-black disabled:cursor-not-allowed'
       disabled={isCopy}
       onClick={copy}
     >

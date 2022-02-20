@@ -31,7 +31,8 @@ const index = ({ data }: { data: any }) => {
     player?.play()
   }, [curCount])
   return (
-    <div className='bg-transparent'>
+    <div className='bg-transparent font-lu'>
+      <title>hulalala</title>
       <BgImage></BgImage>
       <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
         <InfoCard></InfoCard>

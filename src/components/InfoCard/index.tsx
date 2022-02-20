@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigate } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
 export const InfoCard = () => {
@@ -7,11 +8,20 @@ export const InfoCard = () => {
       <div className='flex-initial'>
         <StaticImage className='m-5 w-32 h-32 rounded-full' src='../../static/images/head.jpg' alt='head'></StaticImage>
       </div>
-      <div className='flex-auto ml-5'>
-        <div className='mt-5 text-2xl '>hulalala</div>
-        <div className='mb-5'>a front engineer and a new rustacean</div>
+      <div className='flex-auto flex flex-col justify-center ml-5'>
+        <div className='text-3xl font-medium p-1'>hulalala</div>
+        <div className='text-2xl p-1'>a front engineer and a new rustacean</div>
+        <div className='p-1'>
+          <div
+            className='cursor-pointer'
+            onClick={e => {
+              navigate(`https://github.com/hulala1a`)
+            }}
+          >
+            <StaticImage width={20} height={20} src='../../static/images/github.svg' alt='github'></StaticImage>
+          </div>
+        </div>
       </div>
-      <div className='absolute top-0 left-0'></div>
     </div>
   )
 }

@@ -1,4 +1,3 @@
-
 import { navigate } from 'gatsby'
 import React from 'react'
 import { Article } from '../Article'
@@ -28,7 +27,7 @@ export const PicCard = ({ data }: { data: any }) => {
           onClick={e => {
             navigate(`/${data.route}`)
           }}
-          className='absolute right-0 bottom-0 px-4 py-2 w-40 bg-red-400 text-white rounded-tl-3xl rounded-br-3xl z-20'
+          className='absolute right-0 bottom-0 px-4 py-2 w-40 bg-blue-400 text-white rounded-tl-3xl rounded-br-3xl z-20'
         >
           Read more
         </button>

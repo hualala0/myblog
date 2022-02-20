@@ -1,8 +1,9 @@
 ---
 title: '并查集详解'
-date: '2021-01-23'
+date: '2022-01-23'
 route: 'union-find'
 author: 'hulalala'
+picture: 'https://picsum.photos/seed/union/200/300'
 ---
 
 # 并查集详解
@@ -31,7 +32,7 @@ author: 'hulalala'
 
 ### 两种启发式策略的简单模拟
 
-![两种启发式策略](../static/images/uf.svg)
+![两种启发式策略](../static/images/uf.png)
 
 ## 代码实现
 

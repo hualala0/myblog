@@ -1,9 +1,9 @@
 ---
 title: '前缀树详解'
-date: '2021-02-15'
+date: '2022-02-15'
 route: 'trie-data-structure'
 author: 'hulalala'
-picture: 'https://picsum.photos/200/300'
+picture: 'https://picsum.photos/seed/tree/200/300'
 ---
 
 # 前缀树（Trie）详解
@@ -20,7 +20,7 @@ picture: 'https://picsum.photos/200/300'
 
 下面这个例子，存储了 apply、apple、apart、bee 和 bed 五个单词的前缀树。
 
-![前缀树例子](https://hulalala.surge.sh/static/images/trie.png)
+![前缀树例子](../static/images/trie.png)
 
 ## 代码实现
 

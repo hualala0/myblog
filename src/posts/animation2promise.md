@@ -1,6 +1,6 @@
 ---
 title: '用 Promise 封装你的 CSS 动画'
-date: '2021-02-10'
+date: '2022-02-10'
 route: 'animation2promise'
 author: 'hulalala'
 ---
