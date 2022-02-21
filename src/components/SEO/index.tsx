@@ -18,7 +18,7 @@ const SEO = ({ description, lang, meta, keywords, title }: any) => {
     `,
   )
   const metaDescription = description || site.siteMetadata.description
-  const metaKeywords = keywords.join(',') || site.siteMetadata.keywords
+  const metaKeywords = keywords?.join(',') || site.siteMetadata.keywords
   return (
     <Helmet
       htmlAttributes={{
