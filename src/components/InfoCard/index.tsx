@@ -10,7 +10,7 @@ export const InfoCard = () => {
       </div>
       <div className='flex-auto flex flex-col justify-center ml-5'>
         <div className='text-3xl font-medium p-1'>hulalala</div>
-        <div className='text-2xl p-1'>a front engineer and a new rustacean</div>
+        <div className='text-2xl p-1'>a front-end engineer and new rustacean</div>
         <div className='p-1'>
           <a className='cursor-pointer' href='https://github.com/hulala1a'>
             <StaticImage width={20} height={20} src='../../static/images/github.svg' alt='github'></StaticImage>
