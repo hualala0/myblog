@@ -1,5 +1,12 @@
 module.exports = {
+  siteMetadata: {
+    title: `hulalala`,
+    author: `hulalala`,
+    description: `my blog`,
+    keywords: `react, graphql, gatsby, typescript, tailwindcss`,
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-pnpm`,
     `gatsby-plugin-typescript`,

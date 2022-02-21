@@ -8,5 +8,18 @@ import { FormatH6 } from './FormatH6'
 import { FormatLink } from './FormatLink'
 import { FormatEm } from './FormatEm'
 import { FormatStrong } from './FormatStrong'
+import { FormatQuote } from './FormatQuote'
 
-export { FormatPre, FormatH1, FormatH2, FormatH3, FormatH4, FormatH5, FormatH6, FormatLink, FormatEm, FormatStrong }
+export {
+  FormatPre,
+  FormatH1,
+  FormatH2,
+  FormatH3,
+  FormatH4,
+  FormatH5,
+  FormatH6,
+  FormatLink,
+  FormatEm,
+  FormatStrong,
+  FormatQuote,
+}

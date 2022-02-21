@@ -9,6 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
         allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
           edges {
             node {
+              excerpt
               frontmatter {
                 title
                 route

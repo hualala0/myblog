@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FormatEm = ({ children }: { children: React.ReactNode }) => {
-  return <div className='border-b-2 px-1'>{children}</div>
+  return <span className='border-b-2'>{children}</span>
 }
 
 export { FormatEm }

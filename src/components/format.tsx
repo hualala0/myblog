@@ -11,14 +11,17 @@ import {
   FormatH6,
   FormatLink,
   FormatPre,
+  FormatQuote,
   FormatStrong,
 } from './MDXFormat'
 import { Layout } from './Layout'
+import SEO from './SEO'
 
 // const MyH1 = (props: any) => <h1 style={{color: 'tomato'}} {...props} />
 const format = ({ pageContext: { edge } }: { pageContext: any }) => {
   return (
     <Layout>
+      <SEO title={edge.node.frontmatter.title} description={edge.node.excerpt} />
       <MDXProvider
         components={{
           // Map HTML element tag to React component
@@ -32,6 +35,7 @@ const format = ({ pageContext: { edge } }: { pageContext: any }) => {
           strong: FormatStrong,
           em: FormatEm,
           a: FormatLink,
+          blockquote: FormatQuote,
           // Or define component inline
         }}
       >

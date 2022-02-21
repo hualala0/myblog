@@ -137,5 +137,5 @@ document.getElementById('box').animate(
 
 ## 更多例子
 
-[利用 WAAPI 实现百叶窗切页效果](https://blog.csdn.net/hulala1a/article/details/122848552)
+[利用 WAAPI 实现百叶窗切页效果](https://hulalala.vercel.app/shutter)
 

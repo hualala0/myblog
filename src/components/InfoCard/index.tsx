@@ -12,14 +12,9 @@ export const InfoCard = () => {
         <div className='text-3xl font-medium p-1'>hulalala</div>
         <div className='text-2xl p-1'>a front engineer and a new rustacean</div>
         <div className='p-1'>
-          <div
-            className='cursor-pointer'
-            onClick={e => {
-              navigate(`https://github.com/hulala1a`)
-            }}
-          >
+          <a className='cursor-pointer' href='https://github.com/hulala1a'>
             <StaticImage width={20} height={20} src='../../static/images/github.svg' alt='github'></StaticImage>
-          </div>
+          </a>
         </div>
       </div>
     </div>

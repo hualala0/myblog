@@ -17,7 +17,7 @@ const index = ({ data }: { data: any }) => {
   useLoading()
   useEffect(() => {
     if (container.current) {
-      const options: options = { duration: 2000, fill: 'both', easing: 'linear' }
+      const options: options = { duration: 1000, fill: 'both', easing: 'ease-in-out' }
       const kyEffect = new KeyframeEffect(
         null,
         {
