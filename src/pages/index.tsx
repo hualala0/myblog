@@ -6,6 +6,7 @@ import { useLoading } from '../hooks'
 import { PageTurn } from '../components/PageTurn'
 import { InfoCard } from '../components/InfoCard'
 import { BgImage } from '../components/BgImage'
+import SEO from '../components/SEO'
 
 const index = ({ data }: { data: any }) => {
   const posts = data.allMdx.edges
@@ -32,7 +33,7 @@ const index = ({ data }: { data: any }) => {
   }, [curCount])
   return (
     <div className='bg-transparent font-lu'>
-      <title>hulalala</title>
+      <SEO title='blog' />
       <BgImage></BgImage>
       <div className='h-auto w-epc p-2 relative left-1/2 transform-gpu -translate-x-1/2'>
         <InfoCard></InfoCard>
@@ -76,7 +77,6 @@ export const pageQuery = graphql`
           excerpt
           frontmatter {
             date
-            description
             title
             picture
             author

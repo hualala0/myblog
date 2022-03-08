@@ -1,5 +1,5 @@
 ---
-title: 'LeetCode 11、盛最多水的容器'
+title: 'LeetCode 11. 盛最多水的容器'
 date: '2021-11-15'
 route: 'container-with-most-water'
 author: 'hulalala'
