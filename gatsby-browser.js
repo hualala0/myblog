@@ -6,7 +6,7 @@ import React from 'react'
 
 // export const wrapRootElement = format
 
-export const onRouteUpdate = ({ location, prevLocation }) => {
+export const onPreRouteUpdate = ({ location, prevLocation }) => {
   const loader = document.getElementById('___loader')
   if (loader) {
     loader.style.display = 'flex'
