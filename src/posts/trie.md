@@ -3,6 +3,7 @@ title: '前缀树详解'
 date: '2022-02-15'
 route: 'trie-data-structure'
 author: 'hulalala'
+picture: 'https://picsum.photos/seed/tree/200/300'
 ---
 
 # 前缀树（Trie）详解

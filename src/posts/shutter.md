@@ -3,7 +3,6 @@ title: '利用WAAPI实现百叶窗切页效果'
 date: '2022-02-09'
 route: 'shutter'
 author: 'hulalala'
-picture: 'https://picsum.photos/seed/window/200/300'
 ---
 
 # 利用 WAAPI 实现百叶窗切页效果
