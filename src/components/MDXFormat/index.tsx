@@ -9,6 +9,7 @@ import { FormatLink } from './FormatLink'
 import { FormatEm } from './FormatEm'
 import { FormatStrong } from './FormatStrong'
 import { FormatQuote } from './FormatQuote'
+import { FormatP } from './FormatP'
 
 export {
   FormatPre,
@@ -22,4 +23,5 @@ export {
   FormatEm,
   FormatStrong,
   FormatQuote,
+  FormatP,
 }

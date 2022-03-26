@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react'
 import CodeCopy from './CodeCopy'
 import CodeContent from './CodeContent'

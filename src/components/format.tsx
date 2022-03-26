@@ -10,6 +10,7 @@ import {
   FormatH5,
   FormatH6,
   FormatLink,
+  FormatP,
   FormatPre,
   FormatQuote,
   FormatStrong,
@@ -36,6 +37,7 @@ const format = ({ pageContext: { edge } }: { pageContext: any }) => {
           em: FormatEm,
           a: FormatLink,
           blockquote: FormatQuote,
+          p: FormatP,
           // Or define component inline
         }}
       >

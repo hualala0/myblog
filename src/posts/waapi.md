@@ -11,6 +11,7 @@ picture: 'https://picsum.photos/seed/web/200/300'
 WAAPI（Web Animations API）是用于浏览器动画的原生 API。相比于前端的的动画解决方案（CSS 动画、requestAnimationFrame），WAAPI 可以更好地和 JavaScript 配合使用，在功能方面也更加丰富。[MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API) 上丰富的文档，本文也将介绍和讲解 WAAPI。
 
 ## 浏览器支持
+
 首先，我们可以通过 [caniuse](https://caniuse.com/) 查看一下 WAAPI 的浏览器支持。
 
 ![浏览器支持](../static/images/waapi_1.png)
@@ -35,7 +36,6 @@ const options = {
 const kyEffect = new KeyframeEffect(box1, keyframes, options)
 const player = new Animation(kyEffect)
 player.play()
-
 ```
 
 ![例子1](../static/images/waapi_2.gif)
@@ -45,13 +45,17 @@ player.play()
 KeyFrameEffect 对象是描述节点执行什么样的动画效果，其构造函数一般有三个参数：target，keyframe 和 option。
 
 ### target
+
 动画绑定的节点。
 
 ### keyframes
+
 关键帧格式的对象。
 
 ### options
+
 动画持续时间或一个对象。
+
 ```typescript
 type cubicBezier<T extends string> = `cubic-bezier${T}`
 type options = {
@@ -66,7 +70,6 @@ type options = {
   composite?: 'add' | 'accumulate' | 'replace' //确定如何在此动画和其他未指定其特定复合操作的单独动画之间组合值
   iterationComposite?: 'accumulate' | 'replace' //确定在此动画中如何从迭代到迭代构建值。
 }
-
 ```
 
 ## Animation 对象
@@ -92,13 +95,12 @@ const kyEffect1 = new KeyframeEffect(box1, keyframes, options)
 const kyEffect2 = new KeyframeEffect(box2, keyframes, options)
 const player1 = new Animation(kyEffect1)
 const player2 = new Animation(kyEffect2)
-const myPlay = async ()=> {
+const myPlay = async () => {
   player1.play()
   await player1.finished
   player2.play()
 }
 myPlay()
-
 ```
 
 ![例子2](../static/images/waapi_3.gif)
@@ -110,7 +112,7 @@ myPlay()
 下面的代码将页面上的所有动画的速度减半。
 
 ```javascript
-document.getAnimations().forEach( (animation) => {
+document.getAnimations().forEach(animation => {
   animation.playbackRate *= 0.5
 })
 ```
@@ -139,4 +141,3 @@ document.getElementById('box').animate(
 ## 更多例子
 
 [利用 WAAPI 实现百叶窗切页效果](https://hulalala.vercel.app/shutter)
-
