@@ -1,6 +1,7 @@
 import './src/styles/loading.css'
 import 'highlight.js/styles/mono-blue.css'
 import './src/styles/index.css'
+import 'katex/dist/katex.css'
 import React from 'react'
 // import { format } from './src/components/format'
 

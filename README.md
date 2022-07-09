@@ -9,5 +9,5 @@ pnpm run develop
 1. Finish documentation
 2. Add PWA support
 3. Create gatsby starter in the branch
-4. Add LaTeX support
+4. Add LaTeX support(finished)
 5. Add notebook support

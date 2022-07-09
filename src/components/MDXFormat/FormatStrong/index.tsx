@@ -1,7 +1,5 @@
 import React from 'react'
 
-const FormatStrong = ({ children }: { children: React.ReactNode }) => {
-  return <span className='font-bold'>{children}</span>
-}
+const FormatStrong = (props: any) => <b {...props}></b>
 
 export { FormatStrong }

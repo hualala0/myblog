@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import {
@@ -38,6 +38,13 @@ const format = ({ pageContext: { edge } }: { pageContext: any }) => {
           a: FormatLink,
           blockquote: FormatQuote,
           p: FormatP,
+          ul: ({ children }: { children: React.ReactNode }) => <div className='pl-4'>{children}</div>,
+          ol: ({ children }: { children: React.ReactNode }) => <div className='pl-4'>{children}</div>,
+          li: ({ children, ...props }: any) => (
+            <Fragment>
+              <div className='float-left -ml-3'>&bull; </div> {children} <br />
+            </Fragment>
+          ),
           // Or define component inline
         }}
       >

@@ -3,7 +3,6 @@ title: 'WAAPI 笔记'
 date: '2022-01-30'
 route: 'waapi'
 author: 'hulalala'
-picture: 'https://picsum.photos/seed/web/200/300'
 ---
 
 # Web Animations API：新兴的浏览器动画解决方案

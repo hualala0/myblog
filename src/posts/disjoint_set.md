@@ -3,7 +3,6 @@ title: '并查集详解'
 date: '2022-01-23'
 route: 'union-find'
 author: 'hulalala'
-picture: 'https://picsum.photos/seed/union/200/300'
 ---
 
 # 并查集详解
