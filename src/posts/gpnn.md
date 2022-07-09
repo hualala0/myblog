@@ -27,7 +27,7 @@ $$
 y_{n} = G(x_{n}, \tilde{y}_{n+1})
 $$
 
-其中， $x_{n}$ 是经过 $n$ 次缩放的输入图像， $\tilde{y}_{n+1}$ 是一个初始猜测，是前 $(n+1)$ 次缩放级别的输出。
+其中，$x_{n}$ 是经过 $n$ 次缩放的输入图像，$\tilde{y}_{n+1}$ 是一个初始猜测，是前 $(n+1)$ 次缩放级别的输出。
 
 #### Patch Nearest Neighbor Generation Module
 
@@ -36,10 +36,10 @@ PNN 包含了以下 6 个主要算法步骤：
 1. **Extract patches**：按照 Query-Key-Value 方案，从 $x_{n}$（作为 $V$）、初始猜测 $\tilde{y}_{n+1}$（作为 $Q$）和类似的模糊图像 $\tilde{x}_{n+1}$（作为 $K$）中提取完全重叠的 $p×p$ 块。唯一的例外是最粗的比例 $(n=N)$，在那里我们使用值块作为键 $(K=V)$。键和值是相匹配的（即来自同一位置的块在两个池中有相同的索引）。
 2. **Compute Distances Matrix**：$D_{i,j} \leftarrow MSE(Q_{i},K_{j})$
 3. **Compute Normalized Scores**：PNN 用以下相似性得分来确定视觉的完整性:
-   $$
-   S_{i,j} = \frac{D_{i,j}}{\alpha + min_{ℓ}D_{ℓ,j}}
-   $$
-   参数 $\alpha$ 是控制完整性程度的旋钮，当 $\alpha$ 较小时,可以保证完整性，而 $\alpha≫1$ 时，与使用 MSE 基本相同。
+$$
+S_{i,j} = \frac{D_{i,j}}{\alpha + min_{ℓ}D_{ℓ,j}}
+$$
+参数 $\alpha$ 是控制完整性程度的旋钮，当 $\alpha$ 较小时,可以保证完整性，而 $\alpha≫1$ 时，与使用 MSE 基本相同。
 4. **Find NNs**：$j_{nn}(i) = argmin_{ℓ}S_{i,ℓ}$
 5. **Replace by NNs**：每个查询块 $Q_{i}$ 被替换成其最近的邻居 $V_{j_{nn}(i)}$ 的值。输出被表示为 $Q_{i}$。
 6. **Combine Patches**：重叠的块被组合成一个图像。多个重叠块中的像素使用高斯加权平均法进行汇总。
