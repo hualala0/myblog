@@ -11,7 +11,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       <title>hulalala</title>
       <BgImage></BgImage>
       <div className=''></div>
-      <div className='col-span-2 sm:px-6 py-2 z-10 bg-white'>
+      <div className='md:col-span-2 col-span-4 px-6 py-2 z-10 bg-white'>
         <Back isHead={true}></Back>
         {children}
         <Back isHead={false}></Back>
